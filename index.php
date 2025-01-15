@@ -1,7 +1,7 @@
 <title>Data Siswa</title>
 <h2>Data Siswa</h2>
 <p>
-    <a href="tambah.php">Tambah Siswa</a>
+    <a class="tambah" href="tambah.php">Tambah Siswa</a>
 </p>
 <table>
     <thead>
@@ -34,8 +34,8 @@ while($data = mysqli_fetch_assoc($result)){
             <td><?=$data['kelas']?></td>
             <td><?=$data['jurusan']?></td>
             <td>
-                <a href="edit.php?id=<?=$data['id']?>"> Edit | </a>
-                <a href="hapus.php?id=<?=$data['id']?>"> Hapus </a>
+                <a class="edit" href="edit.php?id=<?=$data['id']?>"> Edit | </a>
+                <a class="hapus" href="hapus.php?id=<?=$data['id']?>"> Hapus </a>
             </td>
         </tr>
 <?php
@@ -58,8 +58,23 @@ $no++;
         background:#ccc;
     }
     a{
-        font-weight:bold;
         text-decoration:none;
+    }
+    .tambah{
+        font-weight:bold;
+        background:#038ADE;
+        padding:10px;
+        color:white;
+    }
+    .edit{
+        background:darkseagreen;
+        padding:5px;
+        color:white;
+    }
+    .hapus{
+        background:indianred;
+        padding:5px;
+        color:white;
     }
 </style>
 
