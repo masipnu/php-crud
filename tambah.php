@@ -2,7 +2,7 @@
 include "config.php";
 
 if($_SERVER['REQUEST_METHOD']=="POST"){
-    var_dump($_POST);
+    // var_dump($_POST);
     $nama = $_POST['nama'];
     $kelas = $_POST['kelas'];
     $jurusan = $_POST['jurusan'];

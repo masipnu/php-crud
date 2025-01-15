@@ -10,6 +10,7 @@
             <th>Nama</th>
             <th>Kelas</th>
             <th>Jurusan</th>
+            <th>Aksi</th>
         </tr>
     </thead>
     <tbody>
@@ -32,6 +33,10 @@ while($data = mysqli_fetch_assoc($result)){
             <td><?=$data['nama']?></td>
             <td><?=$data['kelas']?></td>
             <td><?=$data['jurusan']?></td>
+            <td>
+                <a href="edit.php?id=<?=$data['id']?>"> Edit | </a>
+                <a href="hapus.php?id=<?=$data['id']?>"> Hapus </a>
+            </td>
         </tr>
 <?php
 $no++;
