@@ -34,7 +34,7 @@ while($data = mysqli_fetch_assoc($result)){
             <td><?=$data['kelas']?></td>
             <td><?=$data['jurusan']?></td>
             <td>
-                <a class="edit" href="edit.php?id=<?=$data['id']?>"> Edit | </a>
+                <a class="edit" href="edit.php?id=<?=$data['id']?>"> Edit </a>
                 <a class="hapus" href="hapus.php?id=<?=$data['id']?>"> Hapus </a>
             </td>
         </tr>
@@ -70,11 +70,13 @@ $no++;
         background:darkseagreen;
         padding:5px;
         color:white;
+        margin:5px;
     }
     .hapus{
         background:indianred;
         padding:5px;
         color:white;
+        margin:5px;
     }
 </style>
 
